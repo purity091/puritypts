@@ -1,0 +1,6 @@
+{
+  "name": "Nichiha UAE",
+  "description": "Distributor website for Nichiha Japanese facade panels in the UAE and Gulf region.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
