@@ -5,7 +5,7 @@ import { Sectors as SectorsComponent } from '../components/Sectors';
 import { Features } from '../components/Features';
 import { TechInnovation } from '../components/TechInnovation';
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2, Settings2, Wind, Waves, Droplets } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Settings2, Wind, Waves, Droplets, Network, Blocks, SquareStack, PanelTop, LayoutGrid, CircleOff } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import compressedAirImage from '../../../prevost/Quick-couplings/Compressed air.png';
 import breathingAirImage from '../../../prevost/Quick-couplings/Breathing air.png';
@@ -67,6 +67,93 @@ const quickCouplingProducts = [
       'ELS quick couplings and ELP fittings are designed for water applications where ease of use and reliable operation are priorities.',
       'The family helps buyers classify and select products faster according to fluid type and practical site conditions.',
       'Built for applications that require repeatable handling, adaptable sizing, and dependable fitting performance.',
+    ],
+  },
+] as const;
+
+const compressedAirNetworkProducts = [
+  {
+    slug: 'fittings',
+    title: 'Fittings',
+    subtitle: 'piece-raccordement-air-comprime',
+    icon: Blocks,
+    accent: 'bg-brand-600',
+    intro:
+      'Compact, light, and resistant fittings designed to integrate smoothly into professional compressed air network installations.',
+    details: [
+      'Built to connect compressed air sections with reliable handling and efficient installation logic.',
+      'Suitable for installation, replacement, repair, or retrofit projects where connection quality matters.',
+      'Supports cleaner network configuration across compressor room outlets and workstation supply routes.',
+    ],
+  },
+  {
+    slug: 'pps',
+    title: 'PPS',
+    subtitle: 'reseau-air-comprime',
+    icon: Network,
+    accent: 'bg-slate-900',
+    intro:
+      'PREVOST PIPING SYSTEM - PPS is a 100% aluminium compressed air network designed to optimise air flows from the compressor room to the workstation.',
+    details: [
+      'Lightweight aluminium network concept focused on flow optimisation and long-term system efficiency.',
+      'Created to improve supply continuity from central production to distributed work areas.',
+      'Fits projects requiring a durable and modern compressed air piping backbone.',
+    ],
+  },
+  {
+    slug: 'pps-sq',
+    title: 'PPS SQ',
+    subtitle: 'PPS SQ',
+    icon: SquareStack,
+    accent: 'bg-brand-700',
+    intro:
+      'The PPS SQ range is designed to equip workstations with a practical, clean, and well-structured compressed air distribution approach.',
+    details: [
+      'Focused on workstation equipment needs within a broader compressed air network design.',
+      'Helps create more accessible outlet points for professional daily use.',
+      'Extends the PPS logic into localized usage zones and point-of-use layouts.',
+    ],
+  },
+  {
+    slug: 'wall-brackets',
+    title: 'Wall Brackets',
+    subtitle: 'applique',
+    icon: PanelTop,
+    accent: 'bg-slate-800',
+    intro:
+      'Wall brackets help support and organize compressed air network components with cleaner, more stable routing across work areas.',
+    details: [
+      'Useful for structured wall-mounted installations and clearer network organization.',
+      'Improves mechanical support across visible routing sections and equipment interfaces.',
+      'Supports neat installation outcomes that are easier to maintain.',
+    ],
+  },
+  {
+    slug: 'mounting-decks',
+    title: 'Mounting Decks',
+    subtitle: 'platine',
+    icon: LayoutGrid,
+    accent: 'bg-brand-600',
+    intro:
+      'Mounting decks provide a practical base for equipping compressed air networks with the connectors and distribution interfaces needed on site.',
+    details: [
+      'Designed to simplify equipment mounting and network readiness at key use points.',
+      'Works well where teams need a stable and organized support surface for distribution accessories.',
+      'Complements wall manifolds and connectors in professional network installations.',
+    ],
+  },
+  {
+    slug: 'pvr',
+    title: 'PVR',
+    subtitle: 'pvr',
+    icon: CircleOff,
+    accent: 'bg-slate-900',
+    intro:
+      'PVR is the all-PVC network concept developed by Prevost for compressed air installations requiring an alternative network configuration.',
+    details: [
+      'Extends the compressed air network offer beyond aluminium with an all-PVC concept.',
+      'Suitable for projects evaluating different material approaches within compressed air distribution.',
+      'Helps buyers compare network strategies based on operational needs and retrofit conditions.',
     ],
   },
 ] as const;
@@ -402,6 +489,242 @@ export function QuickCouplingProductPage() {
                 <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500 mb-2">Best For</div>
                 <div className="text-slate-700 leading-relaxed">
                   Teams that need a faster visual match between application, fluid type, and the correct coupling family.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <DocumentsCTA />
+    </div>
+  );
+}
+
+export function CompressedAirNetwork() {
+  return (
+    <div className="min-h-screen bg-slate-50">
+      <section className="relative overflow-hidden bg-slate-950 px-4 pb-20 pt-40 text-white sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(12,139,242,0.22),transparent_28%),radial-gradient(circle_at_left,rgba(255,255,255,0.06),transparent_24%)]" />
+        <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div>
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-500/10 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] text-brand-300">
+              Compressed Air Network
+            </div>
+            <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+              Network solutions engineered from compressor room to workstation.
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
+              Prevost has created a range of piping systems to supply and optimise compressed air flows from the compressor room outlet to the workstation.
+            </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              {[
+                '100% aluminium PPS network with compact, light and resistant fittings.',
+                'All-PVC network alternative with the PVR concept.',
+                'PPS SQ range now available to equip workstations.',
+                'Connectors, wall manifolds, and mounting decks for full network readiness.',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-300" />
+                  <p className="text-sm leading-relaxed text-slate-200">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-2xl">
+            <div className="grid grid-cols-2 gap-4">
+              {compressedAirNetworkProducts.map((product) => (
+                <div key={product.slug} className="rounded-2xl border border-white/10 bg-white p-5">
+                  <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl ${product.accent} text-white`}>
+                    <product.icon className="h-7 w-7" />
+                  </div>
+                  <div className="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">{product.subtitle}</div>
+                  <div className="mt-2 text-xl font-bold text-slate-950">{product.title}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+              Network Overview
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
+              A complete compressed air architecture, not just isolated parts.
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              We have designed and developed a 100% aluminium compressed air network with compact, light and resistant fittings: the PREVOST PIPING SYSTEM - PPS compressed air network, as well as an all-PVC network with the PVR concept.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-6">
+              To equip workstations, the PPS SQ range is now available.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-8">
+              Prevost also offers a complete selection of connectors, wall manifolds, and mounting decks to best equip your compressed air network.
+            </p>
+            <div className="space-y-4">
+              {[
+                'Supply and optimize compressed air flows from source to point of use.',
+                'Support new installations, replacements, repairs, and retrofit projects.',
+                'Give buyers a structured path to network parts, support components, and workstation equipment.',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-brand-600 mt-0.5 shrink-0" />
+                  <p className="text-slate-700 leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-slate-200 bg-[#f7faff] p-8 shadow-sm">
+            <h3 className="text-3xl font-extrabold tracking-tight text-slate-950 mb-6">Safety and continuity</h3>
+            <p className="text-slate-600 leading-relaxed mb-5">
+              Every compressed air installation, replacement, repair or retrofit should include at least one shut off valve.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-5">
+              This remote controlled pneumatic safety valve can quickly isolate certain areas of the system in the event of emergency or if maintenance is necessary.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              By isolating only certain areas of the system, overall productivity will not be lost.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-3xl mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-brand-700 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+              Product Families
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-5">
+              Explore the building blocks of the compressed air network.
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Each product family below opens into its own page so the selection process becomes clearer and more structured.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {compressedAirNetworkProducts.map((product) => (
+              <Link
+                key={product.slug}
+                to={`/products/compressed-air-network/${product.slug}`}
+                className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl"
+              >
+                <div className="mb-6 rounded-[1.5rem] border border-slate-200 bg-[#f7faff] p-6">
+                  <div className={`flex h-16 w-16 items-center justify-center rounded-2xl ${product.accent} text-white`}>
+                    <product.icon className="h-8 w-8" />
+                  </div>
+                  <div className="mt-5 text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">{product.subtitle}</div>
+                  <div className="mt-2 text-2xl font-bold text-slate-950">{product.title}</div>
+                </div>
+                <p className="text-slate-600 leading-relaxed">{product.intro}</p>
+                <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-brand-700 transition-all group-hover:gap-3">
+                  View Product Page
+                  <ArrowRight className="h-4 w-4" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <DocumentsCTA />
+    </div>
+  );
+}
+
+export function CompressedAirNetworkProductPage() {
+  const { slug } = useParams();
+  const product = compressedAirNetworkProducts.find((item) => item.slug === slug);
+
+  if (!product) {
+    return (
+      <div className="min-h-screen bg-slate-50 py-24">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Product not found</h1>
+          <p className="text-slate-600 mb-8">The requested Compressed Air Network product page does not exist.</p>
+          <Link to="/products/compressed-air-network" className="inline-flex items-center rounded-full bg-brand-600 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-white">
+            Back to Compressed Air Network
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-slate-50">
+      <section className="relative overflow-hidden bg-slate-950 px-4 pb-18 pt-40 text-white sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(12,139,242,0.2),transparent_28%),radial-gradient(circle_at_left,rgba(255,255,255,0.05),transparent_24%)]" />
+        <div className="relative mx-auto max-w-7xl">
+          <Link to="/products/compressed-air-network" className="mb-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-brand-300">
+            Compressed Air Network
+            <ArrowRight className="h-4 w-4 rotate-180" />
+          </Link>
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div className="rounded-[2rem] border border-white/10 bg-white p-8 shadow-2xl">
+              <div className={`flex h-24 w-24 items-center justify-center rounded-[1.75rem] ${product.accent} text-white`}>
+                <product.icon className="h-12 w-12" />
+              </div>
+              <div className="mt-8 rounded-3xl border border-slate-200 bg-[#f7faff] p-8">
+                <div className="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">{product.subtitle}</div>
+                <div className="mt-3 text-4xl font-extrabold text-slate-950">{product.title}</div>
+              </div>
+            </div>
+            <div>
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-500/10 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] text-brand-300">
+                Compressed Air Network Product
+              </div>
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">{product.title}</h1>
+              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">{product.intro}</p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a href="mailto:info@puritypts.com" className="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-white">
+                  Contact an Expert
+                </a>
+                <Link to="/products/compressed-air-network" className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-white">
+                  View All Network Products
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="rounded-[2rem] border border-slate-200 bg-[#f7faff] p-8 shadow-sm">
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 mb-6">Why this product matters</h2>
+            <div className="space-y-4">
+              {product.details.map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-brand-600 mt-0.5 shrink-0" />
+                  <p className="text-slate-700 leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 mb-6">Selection summary</h2>
+            <div className="space-y-5">
+              <div className="rounded-2xl border border-slate-200 p-5">
+                <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500 mb-2">Product Type</div>
+                <div className="text-xl font-bold text-slate-950">{product.title}</div>
+              </div>
+              <div className="rounded-2xl border border-slate-200 p-5">
+                <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500 mb-2">Reference Label</div>
+                <div className="text-xl font-bold text-slate-950">{product.subtitle}</div>
+              </div>
+              <div className="rounded-2xl border border-slate-200 p-5">
+                <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-500 mb-2">Best For</div>
+                <div className="text-slate-700 leading-relaxed">
+                  Buyers and engineers structuring compressed air installations from the compressor room to the workstation.
                 </div>
               </div>
             </div>

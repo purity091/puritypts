@@ -1,31 +1,25 @@
 import { motion } from "motion/react";
-import { CarFront, FlaskConical, Wrench, Factory } from "lucide-react";
+import { CarFront, HardHat, Factory } from "lucide-react";
 
 export function Sectors() {
   const sectors = [
     {
       id: "automotive",
-      title: "Automotive & Garages",
-      description: "High-performance air networks for body shops, assembly lines, and mechanical repair.",
+      title: "Automotive",
+      description: "Compressed air solutions for garages, service centers, body shops, assembly lines, and vehicle maintenance environments.",
       icon: CarFront,
     },
     {
-      id: "manufacturing",
-      title: "Industrial Manufacturing",
-      description: "Reliable distribution systems handling high demand across large-scale production facilities.",
+      id: "industrial",
+      title: "Industrial",
+      description: "Reliable air distribution systems for factories, production plants, workshops, and high-demand industrial operations.",
       icon: Factory,
     },
     {
-      id: "food-beverage",
-      title: "Food & Beverage",
-      description: "Clean, filtration-focused air supply meeting strict health and safety standards.",
-      icon: FlaskConical,
-    },
-    {
-      id: "crafts",
-      title: "Crafts & Workshops",
-      description: "Flexible, ergonomic tool ecosystems for precision work and small-scale operations.",
-      icon: Wrench,
+      id: "construction",
+      title: "Construction",
+      description: "Durable pneumatic and compressed air equipment for construction sites, field operations, and demanding project conditions.",
+      icon: HardHat,
     }
   ];
 
@@ -48,7 +42,7 @@ export function Sectors() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6"
           >
-            Powering every sector.
+            Markets we serve.
           </motion.h3>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -57,11 +51,11 @@ export function Sectors() {
             transition={{ delay: 0.2 }}
             className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed"
           >
-            Our pneumatic and fluid networks are designed to integrate seamlessly into diverse industrial environments, providing tailored efficiency.
+            Prevost solutions are tailored to the practical needs of automotive, industrial, and construction environments.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sectors.map((sector, index) => (
             <motion.div
               key={sector.id}

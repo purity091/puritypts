@@ -18,19 +18,19 @@ export default function MainSiteLayout() {
   return (
     <div className="min-h-screen bg-[#f4f7fb] text-slate-900 font-inter">
       <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <Link to="/" className="text-xl sm:text-2xl font-extrabold uppercase tracking-tight text-slate-950">
             Purity <span className="text-brand-600">Brands</span>
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center rounded-full border border-slate-200 bg-white px-3 py-2 shadow-sm lg:flex">
             {navItems.map((item) => (
               <NavLink
                 key={item.href}
                 to={item.href}
                 className={({ isActive }) =>
-                  `text-sm font-bold uppercase tracking-[0.16em] transition-colors ${
-                    isActive ? 'text-brand-600' : 'text-slate-600 hover:text-slate-950'
+                  `rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                    isActive ? 'bg-brand-50 text-brand-600' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-950'
                   }`
                 }
               >
@@ -40,13 +40,13 @@ export default function MainSiteLayout() {
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
-            <a href="tel:+971554330532" className="flex items-center gap-2 text-sm font-bold text-slate-700">
+            <a href="tel:+971554330532" className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm">
               <Phone className="h-4 w-4 text-brand-600" />
               +971 55 433 0532
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-brand-600"
+              className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
             >
               Start Inquiry
               <ArrowUpRight className="h-4 w-4" />
@@ -71,7 +71,7 @@ export default function MainSiteLayout() {
                   to={item.href}
                   onClick={() => setMobileOpen(false)}
                   className={({ isActive }) =>
-                    `block rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] ${
+                    `block rounded-xl px-4 py-3 text-sm font-semibold ${
                       isActive ? 'bg-brand-50 text-brand-700' : 'text-slate-700'
                     }`
                   }
@@ -81,7 +81,7 @@ export default function MainSiteLayout() {
               ))}
               <a
                 href="mailto:info@puritypts.com"
-                className="mt-2 block rounded-xl bg-slate-950 px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.16em] text-white"
+                className="mt-2 block rounded-xl bg-slate-950 px-4 py-3 text-center text-sm font-semibold text-white"
               >
                 Contact Corporate
               </a>

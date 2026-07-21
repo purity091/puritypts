@@ -42,7 +42,7 @@ export function Footer() {
             <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Products</h4>
             <ul className="space-y-4 text-sm text-slate-400">
               <li><Link to="/products/quick-couplings" className="hover:text-brand-400 transition-colors">Quick Couplings</Link></li>
-              <li><Link to="/products" className="hover:text-brand-400 transition-colors">Compressed Air Network</Link></li>
+              <li><Link to="/products/compressed-air-network" className="hover:text-brand-400 transition-colors">Compressed Air Network</Link></li>
               <li><Link to="/products" className="hover:text-brand-400 transition-colors">Compressed Air Treatment</Link></li>
               <li><Link to="/products" className="hover:text-brand-400 transition-colors">Pneumatic Tools</Link></li>
               <li><Link to="/products" className="hover:text-brand-400 transition-colors">Hoses & Hose Reels</Link></li>

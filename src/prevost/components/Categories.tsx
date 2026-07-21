@@ -20,7 +20,7 @@ export function Categories() {
       icon: Network,
       image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop",
       color: "from-slate-700/80 to-slate-950/90",
-      link: "/products"
+      link: "/products/compressed-air-network"
     },
     {
       id: "hoses-hose-reels",
@@ -29,7 +29,7 @@ export function Categories() {
       icon: Cable,
       image: "https://images.unsplash.com/photo-1621609764015-385a4436f561?q=80&w=800&auto=format&fit=crop",
       color: "from-brand-600/80 to-brand-900/90",
-      link: "/products"
+      link: "/products/hoses-hose-reels"
     },
     {
       id: "pneumatic-tools",
@@ -38,7 +38,7 @@ export function Categories() {
       icon: Wrench,
       image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=800&auto=format&fit=crop",
       color: "from-slate-700/80 to-slate-950/90",
-      link: "/products"
+      link: "/products/pneumatic-tools"
     },
     {
       id: "compressed-air-treatment",
@@ -47,7 +47,7 @@ export function Categories() {
       icon: Wind,
       image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=800&auto=format&fit=crop",
       color: "from-brand-600/80 to-brand-900/90",
-      link: "/products"
+      link: "/products/compressed-air-treatment"
     }
   ];
 
