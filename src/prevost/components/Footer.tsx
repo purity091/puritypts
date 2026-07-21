@@ -1,4 +1,5 @@
 import { ArrowRight, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -40,11 +41,11 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Products</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Connection Systems</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">PPS Piping Networks</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Air Treatment</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Pneumatic Tools</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Hoses & Reels</a></li>
+              <li><Link to="/products/quick-couplings" className="hover:text-brand-400 transition-colors">Quick Couplings</Link></li>
+              <li><Link to="/products" className="hover:text-brand-400 transition-colors">Compressed Air Network</Link></li>
+              <li><Link to="/products" className="hover:text-brand-400 transition-colors">Compressed Air Treatment</Link></li>
+              <li><Link to="/products" className="hover:text-brand-400 transition-colors">Pneumatic Tools</Link></li>
+              <li><Link to="/products" className="hover:text-brand-400 transition-colors">Hoses & Hose Reels</Link></li>
             </ul>
           </div>
 

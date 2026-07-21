@@ -17,11 +17,11 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", to: "/" },
-    { name: "Products", to: "/products" },
-    { name: "Sectors", to: "/sectors" },
-    { name: "Innovation", to: "/innovation" },
-    { name: "Services", to: "/services" },
-    { name: "Company", to: "/company" },
+    { name: "Our Products", to: "/products" },
+    { name: "Our Markets", to: "/sectors" },
+    { name: "Videos", to: "/services" },
+    { name: "Our Services", to: "/services" },
+    { name: "Our Company", to: "/company" },
   ];
 
   return (
@@ -78,9 +78,12 @@ export function Navbar() {
               </span>
               <ChevronDown className="w-3 h-3 opacity-50" />
             </button>
-            <button className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-md text-sm font-bold transition-all shadow-md shadow-brand-500/20 hover:shadow-brand-500/40">
-              Contact Us
-            </button>
+            <a href="#documents" className="text-sm font-bold text-slate-600 hover:text-brand-600 transition-colors">
+              Documents
+            </a>
+            <a href="mailto:info@puritypts.com" className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-md text-sm font-bold transition-all shadow-md shadow-brand-500/20 hover:shadow-brand-500/40">
+              Contact
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -120,9 +123,12 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col gap-4 px-3">
-                <button className="w-full bg-brand-600 text-white px-5 py-3 rounded-md font-bold shadow-sm">
-                  Contact Us
-                </button>
+                <a href="#documents" className="w-full border border-slate-200 text-slate-900 px-5 py-3 rounded-md font-bold shadow-sm text-center">
+                  Documents
+                </a>
+                <a href="mailto:info@puritypts.com" className="w-full bg-brand-600 text-white px-5 py-3 rounded-md font-bold shadow-sm text-center">
+                  Contact
+                </a>
               </div>
             </div>
           </motion.div>

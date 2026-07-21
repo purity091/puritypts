@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Globe, ShieldCheck, Calculator, Play, MessagesSquare, Leaf, PenTool, BarChart3, HelpingHand, HelpCircle, ArrowRight, MapPin, Phone, Mail, Award, Zap, Package, Shield } from 'lucide-react';
+import { Globe, ShieldCheck, Calculator, Play, MessagesSquare, Leaf, PenTool, BarChart3, HelpingHand, HelpCircle, ArrowRight, MapPin, Phone, Mail, Award, Zap, Package, Shield, CheckCircle2, Clock3, Wrench, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function Stats() {
   const stats = [
-    { num: '45+', en: 'Years of Expertise' },
     { num: '80+', en: 'Countries Served' },
-    { num: '10K+', en: 'Industrial Products' },
-    { num: '100%', en: 'Leak-Free Guarantee' }
+    { num: '45+', en: 'Years of Expertise' },
+    { num: '90%', en: 'Production in France & Italy' },
+    { num: '7000+', en: 'Product References' }
   ];
   return (
     <div className="py-12 lg:py-24 bg-brand-600 text-white relative overflow-hidden">
@@ -21,6 +21,373 @@ export function Stats() {
         ))}
       </div>
     </div>
+  );
+}
+
+export function IntroShowcase() {
+  return (
+    <section className="py-16 lg:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+        <div>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+            Your Compressed Air Partner
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
+            Discover Prevost
+          </h2>
+          <p className="text-lg text-slate-600 leading-relaxed mb-6">
+            For over 45 years, Prevost has stood at the forefront of innovation, offering a complete range of compressed air solutions from the compressor outlet to the workstation.
+          </p>
+          <p className="text-slate-600 leading-relaxed mb-8">
+            Our products meet multiple quality standards, hygiene requirements, sustainability goals, and performance needs. They are specifically designed to meet the requirements of pressure equipment standards.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {['ASME QPS', 'TUV', 'AFNOR', 'PI'].map((item) => (
+              <span key={item} className="px-4 py-2 rounded-full bg-slate-100 text-slate-800 text-sm font-bold uppercase tracking-[0.16em]">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="rounded-[2rem] overflow-hidden border border-slate-200 bg-slate-950 text-white shadow-2xl">
+          <img
+            src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=1600&auto=format&fit=crop"
+            alt="Compressed air solutions"
+            className="h-[420px] w-full object-cover opacity-70"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ServiceCommitment() {
+  const items = [
+    {
+      title: 'Technical Expertise',
+      text: 'Our experts assess your projects and design custom-made, durable, and effective solutions.',
+    },
+    {
+      title: 'Network Sizing',
+      text: 'We model your compressed air networks with precision to ensure performance and longevity.',
+    },
+    {
+      title: 'Prevost Academy',
+      text: 'Our training is aimed at anyone wishing to improve their skills on our products.',
+    },
+    {
+      title: 'Order Management',
+      text: 'Our team of experts is always available to respond to your operational issues.',
+    },
+  ];
+
+  return (
+    <section className="py-16 lg:py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-3xl mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-brand-700 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+            We Stand By Your Side
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-5">
+            Designing, training, supporting: our commitment
+          </h2>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            From design to after-sales, Prevost accompanies you with expertise and proximity.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {items.map((item) => (
+            <div key={item.title} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function DocumentsCTA() {
+  return (
+    <section id="documents" className="py-16 lg:py-24 bg-slate-950 text-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 lg:p-12 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+              Let's Move Forward Together
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5">
+              Our teams are ready to support you.
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Consult our documents, find all our videos, or contact an expert to discuss your compressed air project.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <a href="#documents" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-bold uppercase tracking-[0.18em] text-slate-950">
+              Consult Our Documents
+            </a>
+            <a href="mailto:info@puritypts.com" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white">
+              Contact an Expert
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function BuyerConfidence() {
+  const points = [
+    {
+      icon: Shield,
+      title: 'Leak-Free Performance',
+      text: 'Engineered aluminum networks and safety couplings designed to cut pressure loss and reduce unplanned downtime.',
+    },
+    {
+      icon: Clock3,
+      title: 'Faster Project Turnaround',
+      text: 'Local GCC stock and direct technical support shorten approval, supply, and installation cycles.',
+    },
+    {
+      icon: Award,
+      title: 'Industrial-Grade Reliability',
+      text: 'Certified components built for demanding production environments where safety and consistency matter.',
+    },
+  ];
+
+  return (
+    <section className="py-16 lg:py-24 bg-white border-b border-slate-100">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-3xl mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+            Why Buyers Choose Prevost
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-5">
+            Built to remove friction from industrial buying decisions.
+          </h2>
+          <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
+            The landing page now leads with the outcomes customers care about most: safer operations, cleaner installations, and measurable efficiency gains.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {points.map((point, index) => (
+            <motion.div
+              key={point.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-brand-600/20">
+                <point.icon className="w-7 h-7" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">{point.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{point.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ConversionJourney() {
+  const steps = [
+    {
+      number: '01',
+      title: 'Share Your Requirement',
+      text: 'Send your plant layout, compressor data, or expansion target and our team identifies the right network approach.',
+    },
+    {
+      number: '02',
+      title: 'Receive Technical Sizing',
+      text: 'We recommend the right pipe diameter, fittings, and accessories to reduce pressure drop and installation waste.',
+    },
+    {
+      number: '03',
+      title: 'Approve Pricing Fast',
+      text: 'Get a clear quotation with local availability, project scope, and engineering-backed recommendations.',
+    },
+    {
+      number: '04',
+      title: 'Install With Confidence',
+      text: 'Your team receives practical support for rollout, expansion planning, and long-term reliability.',
+    },
+  ];
+
+  return (
+    <section className="py-16 lg:py-28 bg-slate-950 text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+              Conversion Path
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5">
+              A simple path from first inquiry to operational savings.
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              This section removes hesitation by showing what happens next and how quickly a prospect can move toward a practical decision.
+            </p>
+          </div>
+          <a
+            href="/prevost/services"
+            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-brand-300 hover:text-white transition-colors"
+          >
+            View Services
+            <ChevronRight className="w-4 h-4" />
+          </a>
+        </div>
+
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
+              className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-7"
+            >
+              <div className="text-brand-400 text-sm font-black tracking-[0.3em] mb-5">{step.number}</div>
+              <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
+              <p className="text-slate-300 leading-relaxed">{step.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ROIBooster() {
+  const outcomes = [
+    'Lower energy loss from leakage and pressure drop',
+    'Cleaner future expansions without rework-heavy layouts',
+    'Safer operator handling with quick-connect systems',
+    'Less maintenance friction across large workshop networks',
+  ];
+
+  return (
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-brand-50 via-white to-slate-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-brand-100 text-brand-700 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+              ROI Focus
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-5">
+              Show customers the operational return before they ask for it.
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
+              Buyers convert faster when the value is concrete. This section frames the offer around reduced waste, safer installation, and stronger lifecycle economics.
+            </p>
+            <div className="space-y-4">
+              {outcomes.map((outcome) => (
+                <div key={outcome} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-brand-600 mt-0.5 shrink-0" />
+                  <p className="text-slate-700 font-medium leading-relaxed">{outcome}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] bg-slate-950 text-white p-8 md:p-10 shadow-2xl shadow-brand-950/10 border border-slate-900 overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-brand-500/10 rounded-full blur-3xl"></div>
+            <div className="relative z-10">
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="rounded-2xl bg-white/5 border border-white/10 p-5">
+                  <div className="text-3xl font-black text-brand-400 mb-2">30%</div>
+                  <div className="text-sm uppercase tracking-[0.18em] text-slate-300 font-bold">Potential Energy Savings</div>
+                </div>
+                <div className="rounded-2xl bg-white/5 border border-white/10 p-5">
+                  <div className="text-3xl font-black text-white mb-2">24h</div>
+                  <div className="text-sm uppercase tracking-[0.18em] text-slate-300 font-bold">Response Rhythm</div>
+                </div>
+              </div>
+              <div className="rounded-3xl bg-white/5 border border-white/10 p-6">
+                <div className="flex items-center gap-3 mb-5">
+                  <Wrench className="w-6 h-6 text-brand-400" />
+                  <h3 className="text-2xl font-bold">Need a sizing review?</h3>
+                </div>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Direct buyers to the next best action with a clear technical offer instead of a generic brochure request.
+                </p>
+                <a
+                  href="/prevost/products"
+                  className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-md font-bold transition-colors shadow-lg shadow-brand-600/25"
+                >
+                  Explore Product Range
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function DirectContactStrip() {
+  return (
+    <section className="py-16 lg:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="rounded-[2rem] bg-brand-600 text-white p-8 md:p-10 lg:p-14 shadow-2xl shadow-brand-600/20">
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-extrabold uppercase tracking-[0.25em] mb-5">
+                Ready To Convert
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5">
+                Turn interest into a qualified project conversation.
+              </h2>
+              <p className="text-lg text-brand-50/90 leading-relaxed max-w-2xl">
+                Give decision-makers three immediate ways to act: call, email, or review services. This lowers drop-off and improves lead quality from the landing page.
+              </p>
+            </div>
+
+            <div className="grid gap-4">
+              <a
+                href="tel:+971554330532"
+                className="flex items-center justify-between rounded-2xl bg-white text-slate-900 px-5 py-4 font-bold shadow-lg hover:translate-x-1 transition-transform"
+              >
+                <span className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-brand-600" />
+                  Call Sales Engineer
+                </span>
+                <span className="text-brand-700">+971 55 433 0532</span>
+              </a>
+              <a
+                href="mailto:info@puritypts.com"
+                className="flex items-center justify-between rounded-2xl bg-brand-700/70 border border-white/20 px-5 py-4 font-bold hover:bg-brand-700 transition-colors"
+              >
+                <span className="flex items-center gap-3">
+                  <Mail className="w-5 h-5" />
+                  Email Project Details
+                </span>
+                <span>info@puritypts.com</span>
+              </a>
+              <a
+                href="/prevost/services"
+                className="flex items-center justify-between rounded-2xl bg-[#020b14] border border-white/10 px-5 py-4 font-bold hover:bg-slate-950 transition-colors"
+              >
+                <span className="flex items-center gap-3">
+                  <Package className="w-5 h-5 text-brand-300" />
+                  Review Engineering Support
+                </span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,39 +1,53 @@
 import { motion } from "motion/react";
-import { ArrowRight, Wind, Network, Settings2, Wrench } from "lucide-react";
+import { ArrowRight, Wind, Network, Settings2, Wrench, Cable } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Categories() {
   const categories = [
     {
-      id: "connections",
-      title: "Connection Systems",
-      description: "Prevo S1 safety couplings, quick-release fittings, and hose connectors for secure industrial grids.",
+      id: "quick-couplings",
+      title: "Quick Couplings",
+      description: "PrevoS1 fittings combine technological performance with economic benefits to ensure safe connection and disconnection.",
       icon: Settings2,
       image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop",
-      color: "from-brand-600/80 to-brand-900/90"
+      color: "from-brand-600/80 to-brand-900/90",
+      link: "/products/quick-couplings"
     },
     {
-      id: "distribution",
-      title: "Piping Networks",
-      description: "100% aluminum compressed air networks (Prevost Piping System - PPS) for leak-free operations.",
+      id: "compressed-air-network",
+      title: "Compressed Air Network",
+      description: "Our range Prevost Piping System (PPS), a modular concept of 100% aluminium tubes and fittings, optimises compressed air flows from the compressor room to the workstation.",
       icon: Network,
       image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop",
-      color: "from-slate-700/80 to-slate-950/90"
+      color: "from-slate-700/80 to-slate-950/90",
+      link: "/products"
     },
     {
-      id: "treatment",
-      title: "Air Treatment",
-      description: "Advanced filtration, regulation, and lubrication units to guarantee optimal air quality.",
-      icon: Wind,
+      id: "hoses-hose-reels",
+      title: "Hoses & Hose Reels",
+      description: "Prevost offers a wide selection of heavy-duty, easy-to-use automatic reels that are essential in every workshop.",
+      icon: Cable,
       image: "https://images.unsplash.com/photo-1621609764015-385a4436f561?q=80&w=800&auto=format&fit=crop",
-      color: "from-brand-600/80 to-brand-900/90"
+      color: "from-brand-600/80 to-brand-900/90",
+      link: "/products"
     },
     {
-      id: "tools",
+      id: "pneumatic-tools",
       title: "Pneumatic Tools",
-      description: "Ergonomic blowguns, impact wrenches, and pneumatic equipment for intensive applications.",
+      description: "With its range of pneumatic tools, Prevost develops technical products adapted to the requirements of professionals.",
       icon: Wrench,
       image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=800&auto=format&fit=crop",
-      color: "from-slate-700/80 to-slate-950/90"
+      color: "from-slate-700/80 to-slate-950/90",
+      link: "/products"
+    },
+    {
+      id: "compressed-air-treatment",
+      title: "Compressed Air Treatment",
+      description: "A high-performance network must be equipped with efficient compressed air filtration systems adapted to compressor rooms and points of use.",
+      icon: Wind,
+      image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=800&auto=format&fit=crop",
+      color: "from-brand-600/80 to-brand-900/90",
+      link: "/products"
     }
   ];
 
@@ -43,19 +57,19 @@ export function Categories() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <h2 className="text-sm font-bold text-brand-600 uppercase tracking-widest mb-3">
-              Our Expertise
+              Our Products
             </h2>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-              Comprehensive solutions for fluid energy.
+              Discover our range of products to optimise your compressed air installation.
             </h3>
           </div>
-          <button className="flex items-center justify-center gap-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-900 px-6 py-3 rounded-md text-sm font-bold transition-all group shrink-0">
-            View Full Catalog
+          <a href="#documents" className="flex items-center justify-center gap-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-900 px-6 py-3 rounded-md text-sm font-bold transition-all group shrink-0">
+            Consult Documents
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
           {categories.map((cat, index) => (
             <motion.div
               key={cat.id}
@@ -86,10 +100,10 @@ export function Categories() {
                   <p className="text-white/80 text-sm leading-relaxed mb-6">
                     {cat.description}
                   </p>
-                  <div className="inline-flex items-center gap-2 text-white text-sm font-bold group-hover:gap-3 transition-all uppercase tracking-wide">
-                    <span>Explore</span>
+                  <Link to={cat.link} className="inline-flex items-center gap-2 text-white text-sm font-bold group-hover:gap-3 transition-all uppercase tracking-wide">
+                    <span>Discover the Range</span>
                     <ArrowRight className="w-4 h-4" />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </motion.div>
