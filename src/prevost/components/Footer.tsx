@@ -1,4 +1,4 @@
-import { ArrowRight, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -84,10 +84,6 @@ export function Footer() {
             <a href="#" className="hover:text-white transition-colors">Legal Mentions</a>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Sales</a>
-            <button className="flex items-center gap-2 ml-4 hover:text-white transition-colors">
-              <Globe className="w-3.5 h-3.5" />
-              <span className="uppercase tracking-wider">Global (EN)</span>
-            </button>
           </div>
         </div>
       </div>

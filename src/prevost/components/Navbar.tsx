@@ -1,4 +1,4 @@
-import { Globe, Menu, Search, X, ChevronDown } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
@@ -67,16 +67,6 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-6">
             <button className="text-slate-400 hover:text-brand-600 transition-colors">
               <Search className="w-5 h-5" />
-            </button>
-            <div className="h-4 w-px bg-slate-200"></div>
-            <button 
-              className="flex items-center gap-2 text-slate-500 hover:text-brand-600 transition-colors cursor-pointer group"
-            >
-              <Globe className="w-4 h-4 text-slate-400 group-hover:text-brand-600 transition-colors" />
-              <span className="text-xs font-bold uppercase tracking-wider">
-                EN
-              </span>
-              <ChevronDown className="w-3 h-3 opacity-50" />
             </button>
             <a href="#documents" className="text-sm font-bold text-slate-600 hover:text-brand-600 transition-colors">
               Documents
