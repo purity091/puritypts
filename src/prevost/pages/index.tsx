@@ -1,5 +1,5 @@
 import { Hero } from '../components/Hero';
-import { Stats, IntroShowcase, BuyerConfidence, ConversionJourney, ROIBooster, ServiceCommitment, DirectContactStrip, DocumentsCTA, GlobalPresence, Sustainability, Certifications, Services as ServicesComponent, Testimonials, CalculatorCTA, VideoTour, News, FAQ } from '../components/ExtraSections';
+import { Stats, IntroShowcase, BuyerConfidence, ConversionJourney, ROIBooster, ServiceCommitment, DirectContactStrip, DocumentsCTA, GlobalPresence, Sustainability, Certifications, Services as ServicesComponent, Testimonials, CalculatorCTA, VideoTour, FAQ } from '../components/ExtraSections';
 import { Categories } from '../components/Categories';
 import { Sectors as SectorsComponent } from '../components/Sectors';
 import { Features } from '../components/Features';
@@ -242,7 +242,6 @@ export function Home() {
       <ServiceCommitment />
       <DirectContactStrip />
       <DocumentsCTA />
-      <News />
     </>
   );
 }

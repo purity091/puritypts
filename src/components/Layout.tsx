@@ -81,8 +81,7 @@ const navigation: NavItem[] = [
     href: '/about',
     items: [
       { name: 'Our Story', href: '/about' },
-      { name: 'Our Team', href: '/about' },
-      { name: 'Careers', href: '/about' },
+      { name: 'Company Profile', href: '/about' },
     ],
   },
 ];
@@ -299,13 +298,11 @@ export default function Layout() {
             {/* Logo */}
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-3 group">
-                <div className="relative w-12 h-12 flex">
-                  <div className="w-1/2 h-full bg-nichiha-green transition-transform group-hover:scale-105"></div>
-                  <div className="w-1/2 h-full bg-nichiha-blue rounded-tr-full transition-transform group-hover:scale-105 group-hover:-translate-y-1"></div>
-                </div>
-                <span className="text-3xl font-extrabold tracking-tight text-nichiha-green uppercase">
-                  Nichiha
-                </span>
+                <img
+                  src="/nichiha-logo.svg"
+                  alt="Nichiha"
+                  className="h-10 w-auto transition-transform group-hover:scale-[1.02] sm:h-11"
+                />
               </Link>
             </div>
 
@@ -350,13 +347,11 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
               <Link to="/" className="flex items-center space-x-3 mb-6">
-                <div className="relative w-10 h-10 flex">
-                  <div className="w-1/2 h-full bg-nichiha-green"></div>
-                  <div className="w-1/2 h-full bg-nichiha-blue rounded-tr-full"></div>
-                </div>
-                <span className="text-2xl font-extrabold tracking-tight uppercase text-white">
-                  Nichiha
-                </span>
+                <img
+                  src="/nichiha-logo.svg"
+                  alt="Nichiha"
+                  className="h-10 w-auto brightness-0 invert"
+                />
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Premium fiber cement facade panels with Japanese cutting-edge technology. Durable, self-cleaning, and beautifully designed.

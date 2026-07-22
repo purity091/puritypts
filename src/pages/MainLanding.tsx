@@ -41,6 +41,8 @@ const brandCards = [
     href: '/nichiha',
     accent: 'bg-emerald-600',
     icon: Building2,
+    logo: '/nichiha-logo.svg',
+    logoClassName: 'h-10 w-auto',
   },
   {
     title: 'Prevost',
@@ -49,6 +51,8 @@ const brandCards = [
     href: '/prevost',
     accent: 'bg-brand-600',
     icon: Settings,
+    logo: '/logo_prevost.png',
+    logoClassName: 'h-11 w-auto',
   },
 ];
 
@@ -178,8 +182,8 @@ export default function MainLanding() {
               >
                 <div className={`h-2 w-full ${card.accent}`} />
                 <div className="p-8 lg:p-10">
-                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-950 text-white">
-                    <card.icon className="h-8 w-8" />
+                  <div className="mb-6 flex min-h-12 items-center">
+                    <img src={card.logo} alt={card.title} className={card.logoClassName} />
                   </div>
                   <div className="mb-3 text-sm font-extrabold uppercase tracking-[0.25em] text-slate-500">{card.type}</div>
                   <h3 className="mb-4 text-3xl font-extrabold text-slate-950">{card.title}</h3>

@@ -26,104 +26,101 @@ export function Navbar() {
 
   return (
     <>
-      <div className="bg-slate-900 text-slate-200 text-xs sm:text-sm font-medium py-1.5 px-4 min-h-[32px] flex justify-between items-center z-50 relative w-full">
-        <a href="/" className="font-bold text-slate-400 hover:text-white transition-colors flex items-center gap-1 uppercase tracking-wider text-[10px] sm:text-xs whitespace-nowrap">
+      <div className="relative z-50 flex min-h-[32px] w-full items-center justify-between border-b border-slate-200 bg-white px-4 py-1.5 text-xs font-medium text-slate-500 sm:text-sm">
+        <a href="/" className="flex items-center gap-1 whitespace-nowrap text-[10px] font-semibold text-slate-500 transition-colors hover:text-slate-900 sm:text-xs">
           &larr; Purity Brands
         </a>
-        <div className="flex items-center gap-2 text-center flex-1 justify-center">
-          <span className="text-brand-400 font-bold flex items-center gap-1">📍 REGIONAL UPDATE:</span> 
-          <span className="hidden lg:inline">Visit our Official GCC Distribution Branch <strong>Purity Premium (بيورتي بريميزم)</strong> in Dubai.</span>
-          <span className="hidden sm:inline lg:hidden">Official GCC Distributor: Purity Premium.</span>
+        <div className="flex flex-1 items-center justify-center gap-2 text-center">
+          <span className="hidden font-semibold text-brand-700 sm:inline">Regional update</span>
+          <span className="hidden lg:inline">Visit our official GCC distribution branch <strong>Purity Premium</strong> in Dubai.</span>
+          <span className="hidden sm:inline lg:hidden">Official GCC distributor: Purity Premium.</span>
         </div>
-        <div className="w-[100px] hidden md:block"></div>
-      </div>
-      <nav className={`fixed left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'top-0 bg-white/90 backdrop-blur-lg border-b border-slate-200/50 shadow-sm py-2' : 'top-[32px] sm:top-[36px] bg-white py-4'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <a href="/" title="Back to Purity Brands" className="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
-             <div className="w-9 h-9 bg-brand-600 rounded flex items-center justify-center group-hover:bg-brand-700 transition-colors">
-                <div className="w-4 h-4 rounded-full border-[2.5px] border-white"></div>
-             </div>
-            <span className="font-bold text-2xl tracking-tight text-slate-900 uppercase ml-1">
-              Prevost
-            </span>
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link, idx) => (
-              <Link
-                key={idx}
-                to={link.to}
-                className="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors flex items-center gap-1"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Right Actions */}
-          <div className="hidden lg:flex items-center gap-6">
-            <button className="text-slate-400 hover:text-brand-600 transition-colors">
-              <Search className="w-5 h-5" />
-            </button>
-            <a href="#documents" className="text-sm font-bold text-slate-600 hover:text-brand-600 transition-colors">
-              Documents
-            </a>
-            <a href="mailto:info@puritypts.com" className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-md text-sm font-bold transition-all shadow-md shadow-brand-500/20 hover:shadow-brand-500/40">
-              Contact
-            </a>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center gap-4">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-slate-600 hover:text-slate-900 focus:outline-none p-2"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
+        <div className="hidden w-[100px] md:block"></div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-b border-slate-200 overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-1">
-              {navLinks.map((link, idx) => (
+      <nav
+        className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
+          scrolled
+            ? "top-0 border-b border-slate-200 bg-white/95 py-2 shadow-sm backdrop-blur-lg"
+            : "top-[32px] border-b border-slate-200/80 bg-white/95 py-3 backdrop-blur-lg sm:top-[36px]"
+        }`}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <a href="/" title="Back to Purity Brands" className="group flex shrink-0 items-center gap-2">
+              <img
+                src="/logo_prevost.png"
+                alt="Prevost"
+                className="h-10 w-auto transition-transform group-hover:scale-[1.02] sm:h-11"
+              />
+            </a>
+
+            <div className="hidden items-center gap-2 rounded-full border border-slate-200 bg-slate-50 p-1 lg:flex">
+              {navLinks.map((link) => (
                 <Link
-                  key={idx}
+                  key={link.to}
                   to={link.to}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-3 py-3 text-base font-semibold text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg transition-colors"
+                  className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-white hover:text-slate-950"
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col gap-4 px-3">
-                <a href="#documents" className="w-full border border-slate-200 text-slate-900 px-5 py-3 rounded-md font-bold shadow-sm text-center">
-                  Documents
-                </a>
-                <a href="mailto:info@puritypts.com" className="w-full bg-brand-600 text-white px-5 py-3 rounded-md font-bold shadow-sm text-center">
-                  Contact
-                </a>
-              </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            <div className="hidden items-center gap-3 lg:flex">
+              <button className="rounded-full border border-slate-200 bg-white p-2.5 text-slate-500 transition-colors hover:text-slate-950">
+                <Search className="h-5 w-5" />
+              </button>
+              <a href="#documents" className="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">
+                Documents
+              </a>
+              <a href="mailto:info@puritypts.com" className="rounded-xl bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800">
+                Contact
+              </a>
+            </div>
+
+            <div className="flex items-center gap-4 lg:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 text-slate-600 hover:text-slate-900 focus:outline-none"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden border-b border-slate-200 bg-white lg:hidden"
+            >
+              <div className="space-y-1 px-4 pb-6 pt-2">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-slate-950"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <div className="mt-4 flex flex-col gap-4 border-t border-slate-100 px-3 pt-4">
+                  <a href="#documents" className="w-full rounded-xl border border-slate-200 bg-white px-5 py-3 text-center font-medium text-slate-900 shadow-sm">
+                    Documents
+                  </a>
+                  <a href="mailto:info@puritypts.com" className="w-full rounded-xl bg-slate-950 px-5 py-3 text-center font-semibold text-white shadow-sm">
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </>
   );

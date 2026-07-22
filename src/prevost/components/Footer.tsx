@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -9,12 +9,11 @@ export function Footer() {
           
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-8">
-              <div className="w-9 h-9 bg-brand-600 rounded flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full border-[2.5px] border-white"></div>
-              </div>
-              <span className="font-bold text-2xl tracking-tight text-white uppercase ml-1">
-                Prevost
-              </span>
+              <img
+                src="/logo_prevost.png"
+                alt="Prevost"
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-8 max-w-sm">
               Global leader in compressed air piping networks, fluid distribution, and pneumatic safety equipment. Innovating for industry since 1978.
@@ -53,28 +52,24 @@ export function Footer() {
             <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Company</h4>
             <ul className="space-y-4 text-sm text-slate-400">
               <li><a href="#" className="hover:text-brand-400 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-brand-400 transition-colors">News & Events</a></li>
               <li><a href="#" className="hover:text-brand-400 transition-colors">Quality & Certifications</a></li>
               <li><a href="#" className="hover:text-brand-400 transition-colors">Global Presence</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Stay Updated</h4>
+            <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Contact Sales</h4>
             <p className="text-sm text-slate-400 mb-6 leading-relaxed">
-              Subscribe to our newsletter for the latest product innovations and industry insights.
+              Speak directly with our sales team on WhatsApp for product support, pricing, and project inquiries.
             </p>
-            <div className="relative">
-              <input 
-                type="email" 
-                placeholder="Business Email"
-                className="w-full bg-white/5 border border-white/10 rounded-md py-3 px-4 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all"
-              />
-              <button className="absolute right-1 top-1 bottom-1 bg-brand-600 hover:bg-brand-500 text-white rounded px-4 flex items-center justify-center transition-colors">
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+            <a
+              href="https://wa.me/971554330532"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-500"
+            >
+              WhatsApp Sales: +971 55 433 0532
+            </a>
           </div>
         </div>
 
